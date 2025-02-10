@@ -11,7 +11,7 @@ function App() {
 
   const fetchTasks = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/api/tasks");
+      const response = await axios.get('https://taskmanager-backend-six.vercel.app/');
       setTasks(response.data);
     } catch (error) {
       console.error("Error fetching tasks:", error);
@@ -20,7 +20,7 @@ function App() {
 
   const addTask = async (newTask) => {
     try {
-      const response = await axios.post("http://localhost:5000/api/tasks", newTask);
+      const response = await axios.post('https://taskmanager-backend-six.vercel.app/', newTask);
       setTasks([...tasks, response.data]);
       return "Task added successfully!";
     } catch (error) {
@@ -31,7 +31,7 @@ function App() {
 
   const updateTask = async (id, updatedTask) => {
     try {
-      const response = await axios.put(`http://localhost:5000/api/tasks/${id}`, updatedTask);
+      const response = await axios.put(`https://taskmanager-backend-six.vercel.app/${id}`, updatedTask);
       setTasks(tasks.map((task) => (task._id === id ? response.data : task)));
       return "Task updated successfully!";
     } catch (error) {
@@ -42,7 +42,7 @@ function App() {
 
   const deleteTask = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/tasks/${id}`);
+      await axios.delete(`https://taskmanager-backend-six.vercel.app/${id}`);
       setTasks(tasks.filter((task) => task._id !== id));
       return "Task deleted successfully!";
     } catch (error) {
