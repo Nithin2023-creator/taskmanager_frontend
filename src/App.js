@@ -135,7 +135,7 @@ function App() {
           {/* Footer */}
           <footer className="mt-auto py-6 text-center text-gray-400">
             <p className="text-sm">
-              Task Manager © {new Date().getFullYear()} | Built with React
+              Task Manager © {new Date().getFullYear()} | Built by Nithin
             </p>
           </footer>
         </div>
