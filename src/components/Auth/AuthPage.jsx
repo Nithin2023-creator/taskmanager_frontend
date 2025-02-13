@@ -35,10 +35,9 @@ const AuthPage = () => {
     }
   };
 
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white flex items-center justify-center px-4">
-      {/* Background overlay with blur effect */}
+      {/* Background overlay without blur effect */}
       <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 pointer-events-none" />
 
       {/* Auth container */}
@@ -48,7 +47,7 @@ const AuthPage = () => {
         className="w-full max-w-md"
       >
         <motion.div
-          className="backdrop-blur-lg bg-white/10 p-8 rounded-2xl shadow-2xl border border-white/20"
+          className="bg-white/10 p-8 rounded-2xl shadow-2xl border border-white/20"
           whileHover={{ scale: 1.02 }}
           transition={{ type: "spring", stiffness: 300 }}
         >
