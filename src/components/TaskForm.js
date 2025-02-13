@@ -23,7 +23,7 @@ function TaskForm({ onAddTask }) {
       setMessage('Task added successfully!');
       setFormData({ title: '', description: '', status: 'Pending', dueDate: '' });
     } catch (error) {
-      setMessage('Failed to add the task. Please try again.');
+      setMessage('Failed to add the task. Please try again.' + error.message);
     }
   };
 
